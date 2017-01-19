@@ -21,15 +21,22 @@ html {
 .hand {
   width: 14px;
   position: absolute;
-  transform-origin: bottom, center;
+  transform-origin: bottom center;
 }
 
 .hand-hour {
   left: calc(50% - 7px);
   top: calc(50% - 58px);
+  animation: spin 6s infinite;
 }
 
 .hand-minute {
   left: calc(50% - 7px);
   top: calc(50% - 86px);
+  animation: spin 500ms infinite linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
